@@ -14,8 +14,18 @@ def caesar_encrypt(text, shift):
 
     return result
 
+
+def go_over_secret():
+    with open ("secret", 'r') as f:
+        text = f.read()
+        #print(text)
+    for i in range(1,26):
+        print(f"Shift with {i}: {caesar_encrypt(text, i)}\n")
+
 if __name__ == "__main__":
     original_text = "hello world"
     encrypted_text = caesar_encrypt(original_text, 3)
     print(f"Original: {original_text}")
     print(f"Encrypted: {encrypted_text}") # Expected: "khoor zruog"
+
+    go_over_secret()
