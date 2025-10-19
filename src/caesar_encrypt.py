@@ -1,11 +1,16 @@
 # main.py
 def caesar_encrypt(text, shift):
     result = ""
-    for i in range(0, len(text)):
-        if text[i] != " ":
-            result += chr(ord(text[i])+shift)
+    for char in text:
+        if char.isalpha():
+            if char.isupper():
+                base = ord('A')
+                result += chr((ord(char) - base +shift) % 26 + base)
+            elif char.islower():
+                base = ord('a')
+                result += chr((ord(char) - base +shift) % 26 + base)
         else:
-            result += text[i]
+            result += char
 
     return result
 
