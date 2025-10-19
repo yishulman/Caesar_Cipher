@@ -27,5 +27,3 @@ if __name__ == "__main__":
     encrypted_text = caesar_encrypt(original_text, 3)
     print(f"Original: {original_text}")
     print(f"Encrypted: {encrypted_text}") # Expected: "khoor zruog"
-
-    go_over_secret()
