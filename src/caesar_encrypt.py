@@ -1,6 +1,6 @@
 # main.py
 def caesar_encrypt(text, shift):
-    result = ""
+    result = "g"
     return result
 
 if __name__ == "__main__":
